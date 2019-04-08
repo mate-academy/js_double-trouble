@@ -1,8 +1,8 @@
 {
-  "name": "js-task-boilerplate",
+  "name": "double-trouble",
   "version": "1.0.0",
-  "description": "js task boilerplate",
-  "main": "src/sum.js",
+  "description": "Double Trouble",
+  "main": "src/doubleTrouble.js",
   "scripts": {
     "test": "jest",
     "lint": "eslint **/*.js"
