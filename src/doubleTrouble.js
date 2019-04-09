@@ -27,6 +27,15 @@
  */
 function doubleTrouble(array, target) {
   // write code here
+  for (let i = 0; i < array.length; i++) {
+    let firstSummand = array[i];
+    let secondSummand = array[i + 1];
+    if (firstSummand + secondSummand === target) {
+      array.splice(i + 1, 1);
+      i--;
+    }
+  }
+  return array;
 }
 
 module.exports = doubleTrouble;
