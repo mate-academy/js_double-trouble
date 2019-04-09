@@ -27,6 +27,11 @@
  */
 function doubleTrouble(array, target) {
   // write code here
-}
-
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] + array[i + 1] === target) {
+      array.splice(i + 1, 1);
+      i--; // уменьшаем i, чтобы след итерация цикла заново проверила элемент i
+    }
+  } return array;
+};
 module.exports = doubleTrouble;
