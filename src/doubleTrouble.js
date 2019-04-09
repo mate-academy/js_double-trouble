@@ -5,7 +5,7 @@
  *
  * Function takes an array of integers (array), and a target (target), you must
  * find out if any two consecutive numbers in the array sum to target. If so,
- * remove the second number.
+ * remove the second number. Work through the array from left to right.
  *
  * Example:
  *
@@ -15,8 +15,6 @@
  * 1+2 = target, so remove 2. No other pairs = target, so rest of array remains:
  *
  * [1, 3, 4, 5]
- *
- * Work through the array from left to right.
  *
  * Return the resulting array.
  *
