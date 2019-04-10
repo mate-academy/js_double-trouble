@@ -24,7 +24,29 @@
  * @return {number[]} - array of remained numbers
  */
 function doubleTrouble(array, target) {
-  // write code here
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] + array[i + 1] === target) {
+      array.splice(i + 1, 1);
+      i--;
+    }
+  }
+  return array;
 }
+// function doubleTrouble(array, target) {
+//   let newArr = [];
+//   for (var i = 0; i < array.length; i++) {
+//     let sum = array[i] + array[i + 1];
+//     console.log(sum);
+//     if (!isNuN(array[i + 1]) && !isNuN(array[i])) {
+//       if (sum === target) {
+//         delete array[i + 1];
+//       } else {
+//         newArr.push(array[i]);
+//       }
+//     }
+//   }
+//   newArr.push(array[array.length - 1]);
+//   return newArr;
+// }
 
 module.exports = doubleTrouble;
