@@ -25,6 +25,12 @@
  */
 function doubleTrouble(array, target) {
   // write code here
-}
-
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] + array[i + 1] === target) {
+      array.splice(i + 1, 1);
+      i--; // decrement i for next loop iteration re-checks element i
+    }
+  }
+  return array;
+};
 module.exports = doubleTrouble;
