@@ -27,7 +27,7 @@
  */
 function doubleTrouble(array, target) {
   for (let i = 0; i <= array.length; i++) {
-    if (array[i] + array[ i + 1 ] === target) {
+    if (array[i] + array[i + 1] === target) {
       array.splice(i + 1, 1);
       i--;
     }
