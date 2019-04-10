@@ -30,9 +30,9 @@ function doubleTrouble(array, target) {
     const consecutiveSum = array[i] + array[i + 1];
 
     if (consecutiveSum === target) {
-      array.splice((i + 1), 1);
+      array.splice(i + 1, 1);
 
-      doubleTrouble(array, target);
+      i--;
     }
   }
 
