@@ -26,9 +26,9 @@
 function doubleTrouble(array, target) {
   // write code here
   return array.reduce(
-    (resultArray, value, index, iteratedArray) => {
+    (resultArray, value) => {
       if (resultArray[resultArray.length - 1] + value !== target) {
-        resultArray.push(value);
+        resultArray = [...resultArray, value];
       }
       return resultArray;
     }, []);
