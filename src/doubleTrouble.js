@@ -24,15 +24,15 @@
  * @return {number[]} - array of remained numbers
  */
 function doubleTrouble(array, target) {
-  let i = 0;
+  let counter = 0;
   for (let j = 1; j < array.length; j++) {
-    if (array[i] + array[j] === target) {
+    if (array[counter] + array[j] === target) {
       delete array[j];
       array = array.filter(item => !isNaN(item));
-      i--;
+      counter--;
       j--;
     }
-    i++;
+    counter++;
   }
   return array;
 }
