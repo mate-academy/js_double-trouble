@@ -24,7 +24,17 @@
  * @return {number[]} - array of remained numbers
  */
 function doubleTrouble(array, target) {
-  // write code here
+  let i = 0;
+  for (let j = 1; j < array.length; j++) {
+    if (array[i] + array[j] === target) {
+      delete array[j];
+      array = array.filter(item => !isNaN(item));
+      i--;
+      j--;
+    }
+    i++;
+  }
+  return array;
 }
 
 module.exports = doubleTrouble;
