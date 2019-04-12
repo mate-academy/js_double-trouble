@@ -30,10 +30,6 @@ function doubleTrouble(arr, target) {
       i = i--;
     }
   }
-  arr.filter(function(el) {
-    return true;
-  });
   return arr;
 }
-
 module.exports = doubleTrouble;
