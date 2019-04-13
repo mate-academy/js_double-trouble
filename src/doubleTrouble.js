@@ -23,8 +23,17 @@
  *
  * @return {number[]} - array of remained numbers
  */
-function doubleTrouble(array, target) {
-  // write code here
+function doubleTrouble(numbers, target) {
+  for (let i = 0; i < numbers.length - 1; i++) {
+    let first = numbers[i];
+    let second = numbers[i + 1];
+
+    if (first + second === target) {
+      numbers.splice(i + 1, 1);
+      i--;
+    }
+  }
+  return numbers;
 }
 
 module.exports = doubleTrouble;
