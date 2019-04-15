@@ -27,8 +27,7 @@ function doubleTrouble(array, target) {
   let counter = 0;
   for (let j = 1; j < array.length; j++) {
     if (array[counter] + array[j] === target) {
-      delete array[j];
-      array = array.filter(item => !isNaN(item));
+      array.splice(j, 1);
       counter--;
       j--;
     }
