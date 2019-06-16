@@ -25,6 +25,17 @@
  */
 function doubleTrouble(array, target) {
   // write code here
+  let prevNumber = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (target === (array[i] + prevNumber) && i !== 0) {
+      array.splice(i, 1);
+      i--;
+      prevNumber = array[i];
+    } else {
+      prevNumber = array[i];
+    }
+  }
+  return array;
 }
 
 module.exports = doubleTrouble;
