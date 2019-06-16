@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  function doubleTrouble(array, target) {
+    let sum = 0;
+    const arr = [];
+    for (let i = 0; i < array.length; i++) { //итерация цикла
+      console.log(arr[arr.length - 1]);
+      sum = array[i] + arr[arr.length - 1]; // сумма = элемент начального массива + последний элемент финального массива 2 +
+      if (sum !== target) {
+        console.log(arr.push(array[i]));
+      }
+    }
+
+    return arr;
+  }
+
+  console.log(doubleTrouble([1, 3, 5, 6, 7, 4, 3], 7));
+</script>
+</body>
+</html>
+<!--function doubleTrouble(array, target) {-->
+<!--let arr = array;-->
+<!--for (let i = 0; i < array.length; i++) {-->
+
+<!--if (array[i] + array[i + 1] === target) {-->
+
+<!--}-->
+<!--}-->
+
+<!--return arr;-->
+<!--}-->
+<!--console.log(doubleTrouble([2, 6, 2], 8));-->
