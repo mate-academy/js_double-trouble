@@ -25,13 +25,14 @@
  */
 function doubleTrouble(array, target) {
   // write code here
-  for (let i = 0; i < array.length; i++) {
-    if (target === +array[i] + +array[i + 1]) {
-      array.splice(i + 1, 1);
+  const resultArray = array;
+  for (let i = 0; i < resultArray.length; i++) {
+    if (target === +resultArray[i] + +resultArray[i + 1]) {
+      resultArray.splice(i + 1, 1);
       i -= 1;
     }
   }
-  return (array);
+  return resultArray;
 }
 
 module.exports = doubleTrouble;
