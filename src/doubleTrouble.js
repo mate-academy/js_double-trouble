@@ -23,8 +23,18 @@
  *
  * @return {number[]} - array of remained numbers
  */
-function doubleTrouble(array, target) {
-  // write code here
-}
+const doubleTrouble = (array, target) => {
+  const result = [array[0]];
+
+  for (let i = 1; i < array.length; i++) {
+    if (array[i] + result[result.length - 1] === target) {
+      continue;
+    }
+
+    result.push(array[i]);
+  }
+
+  return result;
+};
 
 module.exports = doubleTrouble;
