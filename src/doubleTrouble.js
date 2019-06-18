@@ -22,9 +22,16 @@
  * @param {number} target
  *
  * @return {number[]} - array of remained numbers
- */
+ **/
+
 function doubleTrouble(array, target) {
-  // write code here
+  const incomingArray = [array[0]];
+  for (let i = 1; i < array.length; i++) {
+    if (array[i] + incomingArray[incomingArray.length - 1] !== target) {
+      incomingArray.push(array[i]);
+    }
+  }
+  return incomingArray;
 }
 
 module.exports = doubleTrouble;
