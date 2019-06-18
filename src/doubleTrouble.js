@@ -3,7 +3,7 @@
 /**
  * Implement doubleTrouble function:
  *
- * Function t akes an array of integers (array), and a target (target), you must
+ * Function takes an array of integers (array), and a target (target), you must
  * find out if any two consecutive numbers in the array sum to target. If so,
  * remove the second number. Work through the array from left to right.
  *
@@ -26,7 +26,7 @@
 function doubleTrouble(array, target) {
   const resultArray = array;
   for (let i = 0; i < resultArray.length - 1; i++) {
-    const sum = array[i] + array[i + 1];
+    const sum = resultArray[i] + resultArray[i + 1];
     if (sum === target) {
       resultArray.splice(i + 1, 1);
       i--;
