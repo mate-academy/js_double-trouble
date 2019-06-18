@@ -24,14 +24,14 @@
  * @return {number[]} - array of remained numbers
  */
 function doubleTrouble(array, target) {
-  const resultArray = array;
+  const resultArray = [...array];
   let sum = 0;
 
   for (let i = 0; i < resultArray.length - 1; i++) {
     sum = resultArray[i] + resultArray[i + 1];
     if (sum === target) {
       resultArray.splice(i + 1, 1);
-      i -= 1;
+      i--;
     }
   }
   return resultArray;
