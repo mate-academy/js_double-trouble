@@ -34,4 +34,4 @@ function doubleTrouble(array, target) {
 
 console.log(doubleTrouble([1, 2, 3, 4, 5], 3));
 
-//module.exports = doubleTrouble;
+module.exports = doubleTrouble;
