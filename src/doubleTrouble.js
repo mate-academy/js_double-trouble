@@ -23,12 +23,13 @@
  * @return {number[]} - array of remained numbers
  */
 const doubleTrouble = (array, target) => {
-  for (let i = 0; i < array.length - 1; i++) {
-    if (array[i] + array[i + 1] === target) {
-      array.splice(i + 1, 1);
+  const newArr = array;
+  for (let i = 0; i < newArr.length - 1; i++) {
+    if (newArr[i] + newArr[i + 1] === target) {
+      newArr.splice(i + 1, 1);
       i--;
     };
   }
-  return array;
+  return newArr;
 };
 module.exports = doubleTrouble;
