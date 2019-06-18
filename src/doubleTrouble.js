@@ -24,6 +24,14 @@
  * @return {number[]} - array of remained numbers
  */
 function doubleTrouble(array, target) {
+  const newArr = JSON.parse(JSON.stringify(array));
+  for (let i = 0; i < newArr.length - 1; i++) {
+    if ((newArr[i] + newArr[i + 1]) === target) {
+      newArr.splice(i + 1, 1);
+      i--;
+    }
+  }
+  return newArr;
   // write code here
 }
 
