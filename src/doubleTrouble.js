@@ -24,7 +24,7 @@
  * @return {number[]} - array of remained numbers
  */
 function doubleTrouble(array, target) {
-  const matchedDigits = array;
+  const matchedDigits = array.slice();
 
   for (let i = 0; i < array.length; i++) {
     if (array[i] + array[i + 1] === target) {
