@@ -1,6 +1,7 @@
 'use strict';
 
 const doubleTrouble = require('./doubleTrouble');
+const numbers = [2, 2, 2, 2, 2, 2];
 
 test('doubleTrouble([1, 3, 5, 6, 7, 4, 3], 7)', () => {
   expect(doubleTrouble([1, 3, 5, 6, 7, 4, 3], 7))
@@ -13,7 +14,7 @@ test('doubleTrouble([4, 1, 1, 1, 4], 2)', () => {
 });
 
 test('doubleTrouble([2, 2, 2, 2, 2, 2], 4)', () => {
-  expect(doubleTrouble([2, 2, 2, 2, 2, 2], 4))
+  expect(doubleTrouble(numbers, 4))
     .toEqual([2]);
 });
 
@@ -42,3 +43,8 @@ test(
       .toEqual([6, 4, 9, 6, 4, 2, 2, 9, 6, 4, 1, 9, 8, 7, 7, 5, 2, 5, 6, 2, 9,
         5, 9, 7, 4, 3, 2]);
   });
+
+test('original array is not changed', () => {
+  expect(numbers)
+    .toEqual([2, 2, 2, 2, 2, 2]);
+});

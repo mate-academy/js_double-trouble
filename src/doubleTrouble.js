@@ -18,12 +18,12 @@
  *
  * Return the resulting array.
  *
- * @param {number[]} array
+ * @param {number[]} numbers
  * @param {number} target
  *
  * @return {number[]} - array of remained numbers
  */
-function doubleTrouble(array, target) {
+function doubleTrouble(numbers, target) {
   // write code here
 }
 
