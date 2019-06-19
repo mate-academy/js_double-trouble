@@ -1,5 +1,4 @@
 'use strict';
-
 /**
  * Implement doubleTrouble function:
  *
@@ -23,8 +22,14 @@
  *
  * @return {number[]} - array of remained numbers
  */
-function doubleTrouble(array, target) {
-  // write code here
-}
-
+const doubleTrouble = (array, target) => {
+  const newArr = array.slice();
+  for (let i = 0; i < newArr.length - 1; i++) {
+    if (newArr[i] + newArr[i + 1] === target) {
+      newArr.splice(i + 1, 1);
+      i--;
+    };
+  }
+  return newArr;
+};
 module.exports = doubleTrouble;
