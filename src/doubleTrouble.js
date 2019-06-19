@@ -24,10 +24,10 @@
  * @return {number[]} - array of remained numbers
  */
 function doubleTrouble(array, target) {
-  const matchedDigits = array.slice();
+  const matchedDigits = [...array];
 
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] + array[i + 1] === target) {
+  for (let i = 0; i < matchedDigits.length; i++) {
+    if (matchedDigits[i] + matchedDigits[i + 1] === target) {
       matchedDigits.splice(i + 1, 1);
       i--;
     }
