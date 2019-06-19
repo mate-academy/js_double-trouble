@@ -23,7 +23,7 @@
  * @return {number[]} - array of remained numbers
  */
 const doubleTrouble = (array, target) => {
-  const newArr = array;
+  const newArr = array.slice();
   for (let i = 0; i < newArr.length - 1; i++) {
     if (newArr[i] + newArr[i + 1] === target) {
       newArr.splice(i + 1, 1);
