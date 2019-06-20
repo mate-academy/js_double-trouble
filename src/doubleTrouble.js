@@ -25,6 +25,13 @@
  */
 function doubleTrouble(numbers, target) {
   // write code here
+  const newArray = [array[0]];
+  for (let i = 1; i < array.length; i++) {
+    if (array[i] + newArray[newArray.length - 1] !== target) {
+      newArray.push(array[i]);
+    }
+  }
+  return newArray;
 }
 
 module.exports = doubleTrouble;
