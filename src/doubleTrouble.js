@@ -25,7 +25,7 @@
  */
 function doubleTrouble(array, target) {
   // write code here
-  const resultArray = array;
+  const resultArray = array.slice();
   for (let i = 0; i < resultArray.length; i++) {
     if (target === +resultArray[i] + +resultArray[i + 1]) {
       resultArray.splice(i + 1, 1);
