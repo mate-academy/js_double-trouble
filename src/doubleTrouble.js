@@ -24,7 +24,17 @@
  * @return {number[]} - array of remained numbers
  */
 function doubleTrouble(numbers, target) {
-  // write code here
+  let findedIndex = numbers.findIndex((item, index, arr) =>
+    item + arr[index - 1] === target);
+  let resultArr = numbers.filter((item, index) => index !== findedIndex);
+
+  while (findedIndex !== -1) {
+    findedIndex = resultArr.findIndex((item, index, arr) =>
+      item + arr[index - 1] === target);
+    resultArr = resultArr.filter((item, index) => index !== findedIndex);
+  }
+
+  return resultArr;
 }
 
 module.exports = doubleTrouble;
