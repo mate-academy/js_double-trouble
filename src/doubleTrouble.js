@@ -24,14 +24,13 @@
  * @return {number[]} - array of remained numbers
  */
 function doubleTrouble(numbers, target) {
-  let findedIndex = numbers.findIndex((item, index, arr) =>
-    item + arr[index - 1] === target);
-  let resultArr = numbers.filter((item, index) => index !== findedIndex);
+  let findIndex;
+  let resultArr = [...numbers];
 
-  while (findedIndex !== -1) {
-    findedIndex = resultArr.findIndex((item, index, arr) =>
+  while (findIndex !== -1) {
+    findIndex = resultArr.findIndex((item, index, arr) =>
       item + arr[index - 1] === target);
-    resultArr = resultArr.filter((item, index) => index !== findedIndex);
+    resultArr = resultArr.filter((item, index) => index !== findIndex);
   }
 
   return resultArr;
