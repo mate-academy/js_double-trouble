@@ -32,7 +32,4 @@ function doubleTrouble(numbers, target) {
     return array;
   });
 }
-doubleTrouble(
-  [6, 4, 9, 6, 4, 5, 2, 2, 9, 6, 4, 1, 9, 8, 7, 7, 5, 2, 5, 6, 3, 2,
-    9, 5, 9, 7, 4, 3, 2], 9);
 module.exports = doubleTrouble;
