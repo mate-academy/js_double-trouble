@@ -24,7 +24,15 @@
  * @return {number[]} - array of remained numbers
  */
 function doubleTrouble(numbers, target) {
-  // write code here
+  let j = 0;
+  return numbers.filter(function(el, i, array) {
+    if (i > 0 && array[j] + el === target) {
+      return el !== array[i];
+    } else if (i > 0) { j = i; }
+    return array;
+  });
 }
-
+doubleTrouble(
+  [6, 4, 9, 6, 4, 5, 2, 2, 9, 6, 4, 1, 9, 8, 7, 7, 5, 2, 5, 6, 3, 2,
+    9, 5, 9, 7, 4, 3, 2], 9);
 module.exports = doubleTrouble;
