@@ -24,12 +24,12 @@
  * @return {number[]} - array of remained numbers
  */
 function doubleTrouble(numbers, target) {
-  return numbers.reduce((acc, item) => {
-    if (acc[acc.length - 1] + item !== target) {
-      acc.push(item);
+  return numbers.reduce((resultValues, item) => {
+    if (resultValues[resultValues.length - 1] + item !== target) {
+      resultValues.push(item);
     }
 
-    return acc;
+    return resultValues;
   }, []);
 }
 
