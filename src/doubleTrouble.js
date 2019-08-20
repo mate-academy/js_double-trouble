@@ -29,7 +29,7 @@ function doubleTrouble(numbers, target) {
   for (let i = 1; i < numbersArray.length; i++) {
     if (numbersArray[i - 1] + numbersArray[i] === target) {
       numbersArray.splice(i, 1);
-      i = 0;
+      i--;
     }
   }
 
