@@ -24,7 +24,13 @@
  * @return {number[]} - array of remained numbers
  */
 function doubleTrouble(numbers, target) {
-  // write code here
+  return numbers.reduce((previousValues, currentValue) => {
+    if (previousValues[previousValues.length - 1] + currentValue !== target) {
+      previousValues.push(currentValue);
+    }
+
+    return previousValues;
+  }, []);
 }
 
 module.exports = doubleTrouble;
