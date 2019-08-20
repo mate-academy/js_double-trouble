@@ -25,6 +25,15 @@
  */
 function doubleTrouble(numbers, target) {
   // write code here
+  const arr = numbers.reduce((acc, elem) => {
+    if (acc[acc.length - 1] + elem !== target) {
+      acc.push(elem);
+    }
+
+    return acc;
+  }, []);
+
+  return arr;
 }
 
 module.exports = doubleTrouble;
