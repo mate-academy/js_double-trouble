@@ -27,7 +27,7 @@ function doubleTrouble(numbers, target) {
   const result = [...numbers];
   for (let i = 0; i < result.length; i++) {
     if (result[i] + result[i + 1] === target) {
-      result.splice([i + 1], 1);
+      result.splice(i + 1, 1);
       i--;
     };
   };
