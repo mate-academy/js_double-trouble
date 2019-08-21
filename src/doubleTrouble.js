@@ -24,7 +24,15 @@
  * @return {number[]} - array of remained numbers
  */
 function doubleTrouble(numbers, target) {
-  // write code here
+  const modifiedNumbers = [...numbers];
+  for (let i = 1; i < modifiedNumbers.length; i++) {
+    if (modifiedNumbers[i - 1] + modifiedNumbers[i] === target) {
+      modifiedNumbers.splice(i, 1);
+      i--;
+    }
+  }
+
+  return modifiedNumbers;
 }
 
 module.exports = doubleTrouble;
