@@ -25,13 +25,11 @@
  */
 function doubleTrouble(numbers, target) {
   const numbersInner = [...numbers];
-  let i = 0;
-  while (i < numbersInner.length) {
+  for (let i = 0; i < numbersInner.length; i++) {
     if (numbersInner[i] + numbersInner[i + 1] === target) {
       numbersInner.splice(i + 1, 1);
-      --i;
+      i--;
     }
-    i++;
   }
 
   return numbersInner;
