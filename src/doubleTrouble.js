@@ -24,7 +24,7 @@
  * @return {number[]} - array of remained numbers
  */
 function doubleTrouble(numbers, target) {
-  const remainedNumbers = new Array(...numbers);
+  const remainedNumbers = [...numbers];
   for (let i = 1; i < remainedNumbers.length; i++) {
     if (remainedNumbers[i] + remainedNumbers[i - 1] === target) {
       remainedNumbers.splice(i, 1);
