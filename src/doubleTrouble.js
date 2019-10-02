@@ -26,18 +26,16 @@
 function doubleTrouble(numbers, target) {
   const returnArray = [...numbers];
 
-  for (let i = 0; i < returnArray.length;) {
-    const secondValue = returnArray[i + 1];
-    const sum = returnArray[i] + secondValue;
+  for (let i = 0; i < returnArray.length; i++) {
+    const secondValue = returnArray[i];
+    const sum = returnArray[i - 1] + secondValue;
     if (sum === target) {
-      returnArray.splice(++i, 1);
+      returnArray.splice(i, 1);
       i = 0;
-    } else {
-      i++;
     }
   }
 
   return returnArray;
 }
-
+// console.log(doubleTrouble([2, 2, 2, 2, 2, 2], 4));
 module.exports = doubleTrouble;
