@@ -24,7 +24,15 @@
  * @return {number[]} - array of remained numbers
  */
 function doubleTrouble(numbers, target) {
-  // write code here
+  const arr = [];
+  numbers.reduce(function(accumulator, currentValue, currentIndex) {
+    if (accumulator + currentValue === target) {
+      arr.push(currentIndex);
+      return accumulator;
+    }
+    return currentValue;
+  });
+  return numbers.filter((item, index) => !arr.includes(index));
 }
 
 module.exports = doubleTrouble;
