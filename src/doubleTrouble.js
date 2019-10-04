@@ -26,13 +26,13 @@
 function doubleTrouble(numbers, target) {
   const arr = [...numbers];
 
-  for (let i = 0; i <= arr.length; i++) {
-    for (let j = 0; j < arr.length; j++) {
-      if ((arr[j] + arr[j + 1]) === target) {
-        arr.splice(j + 1, 1);
-      }
+  for (let i = 0; i < arr.length; i++) {
+    if ((arr[i] + arr[i + 1]) === target) {
+      arr.splice(i + 1, 1);
+      i--;
     }
   }
+
   return arr;
 }
 
