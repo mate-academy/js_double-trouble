@@ -25,12 +25,9 @@
  */
 function doubleTrouble(numbers, target) {
   const numbersMy = Array.from(numbers);
-  for (let i = 0; i < numbersMy.length; i++) {
-    if (i === (numbersMy.length - 1)) {
-      break;
-    }
-    if ((numbersMy[i] + numbersMy[i + 1]) === target) {
-      numbersMy.splice(i + 1, 1);
+  for (let i = 1; i < numbersMy.length; i++) {
+    if ((numbersMy[i - 1] + numbersMy[i]) === target) {
+      numbersMy.splice(i, 1);
       i--;
     }
   }
