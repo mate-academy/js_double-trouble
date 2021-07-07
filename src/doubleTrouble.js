@@ -23,8 +23,18 @@
  *
  * @return {number[]} - array of remained numbers
  */
+
 function doubleTrouble(numbers, target) {
-  // write code here
+  const filterNumbers = numbers.reduce((previousValue, currentValue) => {
+    if (!previousValue.length
+      || currentValue + previousValue[previousValue.length - 1] !== target) {
+      previousValue.push(currentValue);
+    }
+
+    return previousValue;
+  }, []);
+
+  return filterNumbers;
 }
 
 module.exports = doubleTrouble;
