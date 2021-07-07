@@ -25,6 +25,15 @@
  */
 function doubleTrouble(numbers, target) {
   // write code here
+  const newArr = [...array];
+  for (let i = 0; i < newArr.length; i++) {
+    const sum = newArr[i] + newArr[i + 1];
+    if (sum === target) {
+      newArr.splice(i + 1, 1);
+      i--;
+    };
+  };
+  return newArr;
 }
 
 module.exports = doubleTrouble;
