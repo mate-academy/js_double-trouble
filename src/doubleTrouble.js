@@ -25,6 +25,14 @@
  */
 function doubleTrouble(numbers, target) {
   // write code here
+  const clonedArray = [...array];
+  for (let i = 0; i < clonedArray.length; i++) {
+    if (clonedArray[i] + clonedArray[i + 1] === target) {
+      clonedArray.splice((i + 1), 1);
+      i--;
+    }
+  }
+  return clonedArray;
 }
 
 module.exports = doubleTrouble;
