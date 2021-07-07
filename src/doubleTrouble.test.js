@@ -43,7 +43,6 @@ test(
       .toEqual([6, 4, 9, 6, 4, 2, 2, 9, 6, 4, 1, 9, 8, 7, 7, 5, 2, 5, 6, 2, 9,
         5, 9, 7, 4, 3, 2]);
   });
-
 test('original array is not changed', () => {
   expect(numbers)
     .toEqual([2, 2, 2, 2, 2, 2]);
