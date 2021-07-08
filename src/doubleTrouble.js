@@ -10,6 +10,7 @@
  * Example:
  *
  * const array = [1, 2, 3, 4, 5]
+ * const array = [1, 3, 4, 5]
  * const target = 3
  *
  * 1+2 = target, so remove 2. No other pairs = target, so rest of array remains:
@@ -24,7 +25,17 @@
  * @return {number[]} - array of remained numbers
  */
 function doubleTrouble(numbers, target) {
-  // write code here
+  const numbersCopy = [...numbers];
+  let i = 0;
+  while (i < numbersCopy.length - 1) {
+    if (numbersCopy[i] + numbersCopy[i + 1] === target) {
+      numbersCopy.splice(i + 1, 1);
+      i--;
+    }
+    i++;
+  }
+
+  return numbersCopy;
 }
 
 module.exports = doubleTrouble;
